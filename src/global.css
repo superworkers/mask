@@ -304,29 +304,11 @@ footer {
   padding: 0.5rem 1rem;
 }
 
-/* Applit */
-
-.browser {
+#hero video {
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
   margin: var(--space-clamp) 0 0;
   width: 100%;
-}
-
-.bar-address {
-  align-items: center;
-  backdrop-filter: blur(8px);
-  background: var(--color-light);
-  display: flex;
-  gap: 12px;
-  padding: 12px;
-}
-
-.viewport {
-  aspect-ratio: 16 / 9;
-  background: var(--color-lightest);
 }
 
 /* Agentics */

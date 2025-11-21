@@ -6,7 +6,7 @@ const scrollConfig = {
   interval: 100,
   origin: 'bottom',
 }
-ScrollReveal().reveal('.mask-brand, nav a, .badge, .browser', scrollConfig)
+ScrollReveal().reveal('.mask-brand, nav a, .badge', scrollConfig)
 ScrollReveal().reveal('h1, h2, p, section', {
   ...scrollConfig,
   viewOffset: { top: -500 },
@@ -57,3 +57,15 @@ if (rainbowItems.length) {
 
 /* Menu toggle */
 qs('#menu-bars')?.addEventListener('click', () => qs('header nav')?.classList.toggle('open'))
+
+/* Video unmute on click */
+const video = qs('video')
+let clicked = false
+video?.addEventListener('click', () => {
+  if (!clicked) {
+    clicked = true
+    video.muted = false
+    video.currentTime = 0
+    setTimeout(() => video.play(), 100)
+  }
+})
